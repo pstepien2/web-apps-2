@@ -1,2 +1,8 @@
 <p>1 Bitcoin is valued at $<%= @usd_rate %> USD</p>
+
+<form action="/bitcoins" method="GET">
+  <input  type ="text" name="amount" placeholder="How Many Bitcoins Do You Have?">
+  <button>Submit!</button>
+</form>
+
 <p>Your Bitcoin is worth $<%= @usd_value %></p>
