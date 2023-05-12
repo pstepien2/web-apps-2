@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-
+  
   def show
     @contact = Contact.find_by({"id" => params["id"]})
     @company = Company.find_by({"id" => @contact["company_id"]})
@@ -8,6 +8,7 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @contact["company_id"] = params["company_id"]
     # render contacts/new view with new Contact form
   end
 
